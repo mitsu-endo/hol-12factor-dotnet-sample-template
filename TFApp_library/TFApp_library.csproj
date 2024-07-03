@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <PackageId>12FactorAppLibrarySample</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Alterbooth</Authors>
+    <Company>Alterbooth</Company>
+    <PackageDescription>12FactorApp library sample</PackageDescription>
+    <!--<RepositoryUrl>https://github.com/ACCOUNT_NAME/REPOSITORY_NAME</RepositoryUrl>-->
+  </PropertyGroup>
+
+</Project>

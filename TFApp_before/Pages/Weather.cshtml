@@ -1,0 +1,23 @@
+﻿@page
+@model TFApp.Pages.WeatherModel
+@{
+}
+
+<div class="row">
+    <h3 class="mb-4">今日の天気は</h3>
+
+    @if (Model.Weather == null)
+    {
+        <h5 class="mb-4">先にユーザー登録を行ってください</h5>
+        <a class="btn btn-primary w-25 mb-4" asp-page="./Register">ユーザー情報を入力</a>
+    }
+    else
+    {
+        <h5 class="mb-4">@Model.Weather.description</h5>
+    }
+
+    <div>
+        <a asp-page="./Index">TOPにもどる</a>
+        <p>User ID：@(Model.UserId ?? "unknown")</p>
+    </div>
+</div>

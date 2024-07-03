@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TFApp_before", "TFApp_before\TFApp_before.csproj", "{F7BD944B-7235-482A-93A8-964F780B28AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ソリューション項目", "ソリューション項目", "{40BAABEA-21DA-4490-9385-673D4F4CE085}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TFApp_library", "TFApp_library\TFApp_library.csproj", "{D57C932B-9FDD-4170-9B0F-13C1C6B7B90B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "weather-api", "weather-api\weather-api.csproj", "{F0CF5CB2-6C10-4090-8513-193FCA9DEC17}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7BD944B-7235-482A-93A8-964F780B28AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7BD944B-7235-482A-93A8-964F780B28AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7BD944B-7235-482A-93A8-964F780B28AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7BD944B-7235-482A-93A8-964F780B28AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF03D6FA-67F9-49DD-8715-1AD7AE754294}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF03D6FA-67F9-49DD-8715-1AD7AE754294}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF03D6FA-67F9-49DD-8715-1AD7AE754294}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF03D6FA-67F9-49DD-8715-1AD7AE754294}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D57C932B-9FDD-4170-9B0F-13C1C6B7B90B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D57C932B-9FDD-4170-9B0F-13C1C6B7B90B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D57C932B-9FDD-4170-9B0F-13C1C6B7B90B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D57C932B-9FDD-4170-9B0F-13C1C6B7B90B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0CF5CB2-6C10-4090-8513-193FCA9DEC17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0CF5CB2-6C10-4090-8513-193FCA9DEC17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0CF5CB2-6C10-4090-8513-193FCA9DEC17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0CF5CB2-6C10-4090-8513-193FCA9DEC17}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B916A284-6E59-42AD-8D29-29BBE4BC5E21}
+	EndGlobalSection
+EndGlobal
