@@ -1,0 +1,37 @@
+on:
+    push:
+      branches:
+        - main
+      paths:
+        - 'TFApp_before/Migrations/*'
+    workflow_dispatch:
+  
+  env:
+    ACCOUNT_NAME: 'mitsu-endo' # GitHubのアカウント名を入れてください
+  
+  jobs:
+    dbmigration:
+      runs-on: ubuntu-latest
+  
+      steps:
+        - uses: actions/checkout@v2
+  
+        - name: Set up .NET Core
+          uses: actions/setup-dotnet@v1
+          with:
+            dotnet-version: '6.0.x'
+            include-prerelease: true
+  
+        # プロジェクトビルド時にパッケージリストアする必要があるため、NuGetソースにGitHub Packagesを追加します
+        - name: Nuget add source for GitHub Packages
+          run: dotnet nuget add source --username ${{ env.ACCOUNT_NAME }} --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/${{ env.ACCOUNT_NAME }}/index.json"
+  
+        - name: Install EF Core CLI
+          run: dotnet tool install dotnet-ef --global --version 6.0.31
+          shell: bash
+  
+        - name: Update database
+          run: dotnet ef database update --project ./TFApp_before/TFApp_before.csproj --verbose || exit 1
+          env:
+            ConnectionStrings:TFAppContext: ${{ secrets.DB_CONNECTION_STRING }}
+          shell: bash
