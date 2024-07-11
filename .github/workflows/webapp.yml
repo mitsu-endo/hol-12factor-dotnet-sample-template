@@ -7,8 +7,8 @@ on:
   workflow_dispatch:
 
 env:
-  APP_SERVICE_NAME: '<YOUR_APP_SERVICE_NAME>' # Azure Web Appsのリソース名を入れてください
-  ACCOUNT_NAME: '<ACCOUNT_NAME>' # GitHubのアカウント名を入れてください
+  APP_SERVICE_NAME: 'webapps-12fa-endo' # Azure Web Appsのリソース名を入れてください
+  ACCOUNT_NAME: 'mitsu-endo' # GitHubのアカウント名を入れてください
 
 jobs:
   # .NET6 Webアプリのビルド
