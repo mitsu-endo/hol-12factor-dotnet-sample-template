@@ -10,7 +10,7 @@
     <Authors>Alterbooth</Authors>
     <Company>Alterbooth</Company>
     <PackageDescription>12FactorApp library sample</PackageDescription>
-    <!--<RepositoryUrl>https://github.com/ACCOUNT_NAME/REPOSITORY_NAME</RepositoryUrl>-->
+    <RepositoryUrl>https://github.com/mitsu-endo/hol-12factor-dotnet-sample-template</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
