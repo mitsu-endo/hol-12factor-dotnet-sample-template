@@ -1,0 +1,35 @@
+name: Pack and push nuget package
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'TFApp_library/*'
+  workflow_dispatch:
+
+env:
+  ACCOUNT_NAME: 'mitsu-endo' # GitHubのアカウント名を入れてください
+
+jobs:
+  publish-nuget:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Set up .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '6.0.x'
+        include-prerelease: true
+
+    - name: Pack
+      run: dotnet pack --configuration Release
+      working-directory: ./TFApp_library
+      
+    - name: Nuget push
+      run: |
+        dotnet nuget add source --username ${{ env.ACCOUNT_NAME }} --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/${{ env.ACCOUNT_NAME }}/index.json"
+        dotnet nuget push bin/Release/12FactorAppLibrarySample.*.nupkg --source "github"
+      working-directory: ./TFApp_library
